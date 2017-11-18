@@ -1,0 +1,126 @@
+@import '../../assets/colors';
+
+.popup {
+    position: relative;
+    z-index: 1;
+
+    margin: auto;
+    padding: 4rem 5rem;
+
+    width: auto;
+    max-width: 912px;
+
+    border-radius: 1rem;
+    border: solid 1px $pinkish-grey;
+
+    background: $white;
+    font-weight: normal;
+
+    text-align: left;
+    animation-name: scaleIn;
+    animation-duration: 0.6s;
+
+
+
+    &-wrapper {
+        position: fixed;
+
+        display: flex;
+        align-items: center;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+
+        margin: auto;
+        overflow-x: hidden;
+
+        overflow-y: auto;
+
+        z-index: 99;
+        background: rgba($warm-grey, 0.7);
+
+        animation-name: fadeIn;
+        animation-duration: 0.3s;
+    }
+
+    &__header {
+        font-size: 4rem;
+        color: $charcoal-grey;
+        margin-bottom: 2rem;
+    }
+
+    &__body {
+        margin: 2rem 0;
+    }
+
+    &__btn {
+        font-size: 1.5rem;
+        line-height: 1;
+        padding: 0;
+
+        font-family: Avenir, Arial, Helvetica, sans-serif;
+        font-weight: 500;
+
+        outline: none;
+        border: none;
+        border-radius: 4rem;
+
+        background: inherit;
+
+        transition: all 0.2s ease-in-out;
+
+        &-close {
+            position: absolute;
+            top: 2rem;
+            right: 2rem;
+            z-index: 1;
+
+            font-size: 1.5rem;
+
+            &:hover {
+                color: $golden-yellow;
+            }
+        }
+    }
+
+    &__footer {
+        padding: 1rem 0 0;
+        text-align: right;
+
+        .popup__btn {
+            padding: 1rem 2rem;
+            margin-left: 2rem;
+
+            color: $white;
+            background-color: $dark-grey;
+
+            &:hover {
+                background-color: $golden-yellow;
+            }
+        }
+        .popup__btn-ok {
+            background-color: $squash;
+        }
+    }
+}
+
+@keyframes scaleIn {
+    0% {
+        transform: scale(0);
+    }
+    50% {
+        transform: scale(0);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+@keyframes fadeIn {
+    0% {
+        opacity: 0
+    }
+    100% {
+        opacity: 1;
+    }
+}

@@ -1,0 +1,45 @@
+@import '../../../../assets/colors';
+
+.cell {
+  width: 80px;
+  height: 80px;
+
+}
+
+.btn {
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  border: solid 4px transparent;
+  font-size: 3rem;
+
+  &:hover {
+    cursor: pointer;
+    border-color: $isHighlighted;
+  }
+
+  &:focus {
+    border-color: $active-figure;
+    outline: none;
+  }
+
+  &:disabled {
+    border-color: transparent;
+    color: $black;
+    cursor: default;
+  }
+}
+
+.remove {
+  cursor: pointer;
+  border-color: $remove-figure;
+}
+
+.is-highlighted {
+  cursor: pointer;
+  border-color: $isHighlighted;
+}
+
+.white {
+  color: $white;
+}
