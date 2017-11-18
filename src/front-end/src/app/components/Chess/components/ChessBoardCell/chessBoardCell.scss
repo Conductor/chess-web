@@ -1,5 +1,23 @@
+@import '../../../../assets/colors';
+
 .cell {
   width: 80px;
   height: 80px;
+}
 
+.btn {
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  border: solid 4px transparent;
+  font-size: 3rem;
+
+  &:focus {
+    border-color: $active-figure;
+    outline: none;
+  }
+}
+
+.white {
+  color: $white;
 }
