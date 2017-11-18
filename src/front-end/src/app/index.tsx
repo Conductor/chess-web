@@ -14,6 +14,7 @@ const root: HTMLElement = document.getElementById('root');
 const MainComponent: JSX.Element = (
     <AppContainer>
         <Provider chessBoardStore={ ChessStore.chessBoardStore }
+                  startNewGame={ ChessStore.startNewGame }
         >
             <Chess />
         </Provider>

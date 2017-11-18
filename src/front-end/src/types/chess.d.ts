@@ -7,5 +7,12 @@ export interface IChessBoard {
 export interface IChessBoardCell {
     type: string;
     owner?: IColorOfFigure;
+    onClick?: (target: HTMLButtonElement) => void;
+    isDisabled?: boolean;
     isHighlighted?: boolean;
+}
+
+export interface IMovePosition {
+    origin: string;
+    destination: string;
 }
