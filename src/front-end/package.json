@@ -5,7 +5,9 @@
   "main": "index.js",
   "scripts": {
     "build": "cross-env NODE_ENV=production webpack -p",
-    "serve": "cross-env NODE_ENV=dev webpack-dev-server --inline --hot --port 3000 --history-api-fallback --host 0.0.0.0"
+    "serve": "cross-env NODE_ENV=dev webpack-dev-server --inline --hot --port 3000 --history-api-fallback --host 0.0.0.0",
+    "lint": "tslint -c tslint.json 'src/**/*.{ts,tsx}'",
+    "test": "jest"
   },
   "dependencies": {
     "axios": "^0.17.1",
@@ -18,6 +20,7 @@
     "@types/react": "^15.0.24",
     "@types/react-dom": "^15.5.0",
     "@types/react-hot-loader": "^3.0.1",
+    "@types/jest": "^21.1.6",
     "autoprefixer": "^7.0.1",
     "babel": "^6.23.0",
     "babel-core": "^6.24.1",
@@ -43,6 +46,7 @@
     "resolve-url-loader": "^2.0.2",
     "sass-loader": "^6.0.5",
     "style-loader": "^0.17.0",
+    "ts-jest": "^21.2.3",
     "ts-loader": "^2.0.3",
     "tslint": "^5.4.3",
     "tslint-loader": "^3.5.3",
@@ -52,6 +56,20 @@
     "webpack-dev-server": "^2.4.5",
     "webpack-notifier": "^1.5.0",
     "webpack-stream": "^3.2.0"
+  },
+  "jest": {
+    "moduleFileExtensions": [
+      "ts",
+      "tsx",
+      "js"
+    ],
+    "globals": {
+      "__DEBUG__": true
+    },
+    "transform": {
+      "\\.(ts|tsx)$": "<rootDir>/node_modules/ts-jest/preprocessor.js"
+    },
+    "testRegex": "/__tests__/.*\\.(ts|tsx|js)$"
   },
   "author": "Pushchinskiy M"
 }
